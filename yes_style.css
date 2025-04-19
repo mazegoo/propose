@@ -2,13 +2,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: rgb(189, 225, 122);
+    height: 100vh; /* Full height for vertical centering */
+    background-color: rgb(189, 225, 122); /* Background color */
+    margin: 0;
+    padding: 0;
 }
 
 .header_text {
-    font-family: 'Nunito';
-    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 5vw; /* Scales with the screen width */
     font-weight: bold;
     color: white;
     text-align: center;
@@ -20,4 +22,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Make the GIF responsive: Ensure it scales properly on small and large screens */
+.gif_container img {
+    width: 100%; /* Image width takes up the full available space */
+    max-width: 500px; /* Maximum width to prevent it from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for small screens (like mobile phones) */
+@media only screen and (max-width: 480px) {
+    .header_text {
+        font-size: 25px; /* Smaller text for very small screens */
+    }
+
+    .gif_container img {
+        height: 60vh; /* Adjust the image height for better fit on smaller screens */
+    }
 }
